@@ -91,8 +91,8 @@ public class WebServer {
             ctx.redirect("/");
         });
 
-        System.out.println("----------------------------------------------");
-        System.out.println("🌐 Web Server running at: http://localhost:7000");
-        System.out.println("----------------------------------------------");
+        System.out.println("--------------------------------------------");
+        System.out.println("Web Server running at: http://localhost:7000");
+        System.out.println("--------------------------------------------");
     }
 }
