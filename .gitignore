@@ -1,0 +1,10 @@
+# Ignore Maven build folder
+target/
+
+# Ignore IDE settings
+.vscode/
+.idea/
+*.iml
+
+# Ignore the actual database (optional, keeps your user data private)
+contacts.db

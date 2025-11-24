@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Contact</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <h1>Edit Contact</h1>
+    
+    <div style="background: rgba(255, 255, 255, 0); padding: 20px; border-radius: 8px;">
+        <form method="post" action="/update-action">
+            
+            <input type="hidden" name="id" th:value="${contact.id}">
+
+            <label>Name:</label>
+            <input type="text" name="name" required th:value="${contact.name}">
+            
+            <label>Phone:</label>
+            <input type="text" name="phone" required th:value="${contact.phone}">
+            
+            <br><br>
+            <button type="submit" class="btn" style="background-color: #ffc107;">Update Contact</button>
+        </form>
+        <a href="/" class="cl-a">Cancel</a>
+    </div>
+
+</body>
+</html>

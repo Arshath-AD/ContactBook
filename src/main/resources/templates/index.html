@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Contact Book</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- <h1>AD Contact Book</h1>
+    <a href="/add-form" class="btn">Add New Contact</a>
+
+    <div th:if="${contacts.isEmpty()}">
+        <p>No contacts found. Go add some!</p>
+    </div>
+
+    <div th:each="c : ${contacts}" class="card">
+        <div>
+            <b th:text="${c.name}">Name Here</b>
+            <span th:text="${c.phone}">123-456</span>
+        </div>
+        <a th:href="'/delete/' + ${c.id}" class="delete-btn">Delete</a>
+    </div> -->
+
+    <h1 class="cyber-glitch" data-text="AD CONTACT BOOK">AD CONTACT BOOK</h1>
+    <a href="/add-form" class="btn">Add New Contact</a>
+
+    <div th:if="${contacts.isEmpty()}">
+        <p>No contacts found. Go add some!</p>
+    </div>
+
+    <div class="contact-grid"> 
+        <div th:each="c : ${contacts}" class="card">
+            <div>
+                <b th:text="${c.name}">Name Here</b><br>
+                <span th:text="${c.phone}">123-456</span>
+            </div>
+            <div>
+                <a th:href="'/update/' + ${c.id}" class="edit-btn">Edit</a>  
+                
+                <a th:href="'/delete/' + ${c.id}" class="delete-btn">Delete</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

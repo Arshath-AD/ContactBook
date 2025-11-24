@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Contact</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <h1>Add New Contact</h1>
+    
+    <div style="background: rgba(48, 48, 48, 0); padding: 20px; border-radius: 8px;">
+        <form method="post" action="/add">
+            <label>Name:</label>
+            <input type="text" name="name" required placeholder="Ex: Monkey D. Luffy">
+            
+            <label>Phone:</label>
+            <input type="text" name="phone" required placeholder="Ex: 555-0100">
+            
+            <br><br>
+            <button type="submit" class="btn">Save Contact</button>
+        </form>
+        <a href="/" class="cl-a">Cancel</a>
+    </div>
+
+</body>
+</html>

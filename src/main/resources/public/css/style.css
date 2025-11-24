@@ -1,0 +1,184 @@
+/* ========================
+   1. GLOBAL RESET & BODY
+   ======================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1b1b1b; 
+    color: #e0e0e0; 
+    padding: 40px 20px;
+    max-width: 1200px; /* Wide enough for 5 columns */
+    margin: 0 auto;
+}
+
+/* ========================
+   2. TYPOGRAPHY & ANIMATION
+   ======================== */
+h1 {
+    text-align: center; /* Better than using vw margins */
+    margin-bottom: 50px;
+    color: #ffc107;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 3rem;
+    animation: neon-pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse {
+    from {
+        text-shadow: 0 0 5px #48ff30, 0 0 10px #48ff30;
+    }
+    to {
+        text-shadow: 0 0 8px #48ff30, 0 0 12px rgba(72, 255, 48, 0.5);
+    }
+}
+
+/* ========================
+   3. GRID SYSTEM
+   ======================== */
+.contact-grid {
+    display: grid;
+    /* 5 Columns */
+    grid-template-columns: repeat(5, 1fr); 
+    /* Gap between items */
+    column-gap: 20px;
+    row-gap: 8vh; 
+    margin-top: 20px;
+}
+
+/* ========================
+   4. CARDS
+   ======================== */
+.card {
+    background: #2c2c2c;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #444;
+    
+    /* Vertical Stack Layout */
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    
+    height: 100%; 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0px 0px 15px rgba(107, 255, 87, 0.4);
+    border-color: #48ff30;
+}
+
+.card b {
+    font-size: 1.2rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.card span {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+}
+
+/* ========================
+   5. BUTTONS & FORMS
+   ======================== */
+/* The big Add button */
+.btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 40px auto;
+    padding: 12px 30px;
+    background-color: #ffc107;
+    color: #1b1b1b;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(72, 255, 48, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(72, 255, 48, 0.6);
+}
+/* edit button */
+.edit-btn {
+    background-color: #ffc107; 
+    color: black; 
+    padding: 7px 7px; 
+    margin-left: 4px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* Delete button inside card */
+.delete-btn {
+    margin-top: 15px;
+    width: 100%;
+    display: block;
+    padding: 7px 3px;
+    color: #ff6b6b;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #ff6b6b;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.cl-a {
+    margin-top: 15px;
+    width: 5.5%;
+    display: block;
+    padding: 7px 6px;
+    color: #ffffff;
+    background-color: #ff6b6b;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.cl-a:hover {
+    background-color: #ff2424;
+    color: rgb(58, 54, 0);
+}
+
+/* Inputs for the form page */
+input {
+    padding: 15px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #2c2c2c;
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    border-color: #48ff30;
+}
+
+/* ========================
+   6. MOBILE RESPONSIVENESS
+   ======================== */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cols on mobile */
+    }
+    
+    h1 {
+        font-size: 2rem; /* Smaller title on mobile */
+    }
+}
